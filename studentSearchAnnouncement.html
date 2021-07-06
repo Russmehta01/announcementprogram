@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- JS file containing function that fetches student input -->
+    <script src="studentFetchInput.js"></script>
+    <script src="studentResults.js"></script>
+    <strong>North Park Announcement Portal</strong>
+    <br>
+    <br>
+
+    <strong>Search for Announcements as a Student.</strong>
+    <br>
+    <br>
+
+    <!--2 hyper link tabs for each page-->
+    <a href="./teacherCreateAnnouncement.html">Teacher Create Announcement</a> &nbsp &nbsp
+    <a href="./studentSearchAnnouncement.html">Student Search Announcement</a> &nbsp &nbsp
+
+    <!-- North Park Image Logo-->
+    <img src="https://pbs.twimg.com/profile_images/665225941057036288/xXpVpaZ_.png" alt="northParkLogo" width="200"
+        height="200">
+
+    <!-- CSS Styling applied to img -->
+    <style>
+        img {
+            display: block;
+            margin-left: 1px;
+            margin-right: 5px;
+        }
+    </style>
+
+</head>
+
+<body>
+    <!-- Form that invokes studentFetchInput function when button is pressed-->
+    <form action="javascript:;" onsubmit="studentFetchInput();redirectPage()">
+
+        <!-- div to hold the fields for student input-->
+        <div id="htmlSAnnouncementFields">
+            <!-- Grade checkbox fields-->
+            <b>
+                <h3>Select the Grade(s)</h3>
+            </b>
+
+            <p>
+                <input id="htmlSGrade9" onclick="unCheckGradeAll(this);recheckAll(this)" type="checkbox">Grade 9
+                <input id="htmlSGrade10" onclick="unCheckGradeAll(this);recheckAll(this)" type="checkbox">Grade 10
+                <input id="htmlSGrade11" onclick="unCheckGradeAll(this);recheckAll(this)" type="checkbox">Grade 11
+                <input id="htmlSGrade12" onclick="unCheckGradeAll(this);recheckAll(this)" type="checkbox">Grade 12
+                <input id="htmlSGradeAll" type="checkbox" onclick ="checkOtherGrades()">All Grades
+            </p>
+
+            <!-- Dropdown menu for Gender-->
+            <b>
+                <h3>Select the Gender</h3>
+            </b>
+
+            <select id="htmlSGender">
+                <option value="allGender">All Gender</option>
+                <option value="maleGender">Male</option>
+                <option value="femaleGender">Female</option>
+                <option value="otherOrPreferNotToSayGender">Other/Prefer not to say</option>
+            </select>
+
+
+            <!-- Dropdown menu for Clubs-->
+            <b>
+                <h3>Select the Club</h3>
+            </b>
+
+            <select id="htmlSClub">
+                <option value = "allClub">All Clubs</option>
+                <option value="northParkHackClub">NPSS Hack Club</option>
+                <option value="northParkMist">NPSS Mist</option>
+                <option value="northParkDeca">NPSS Deca</option>
+            </select>
+            <br>
+            <br>
+
+        </div>
+
+        <!-- Submit Announcement Button (Invokes studentFetchInput function)  -->
+        <button type="submit" id="htmlSGoButton">Search/Go!</button>
+
+    </form>
+
+</body>
+
+</html>

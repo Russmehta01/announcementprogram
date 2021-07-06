@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- JS file containing function that fetches teacher input -->
+    <script src="studentResults.js"></script>
+    <strong>North Park Announcement Portal</strong>
+    <br>
+    <br>
+
+    <strong>Teacher creator page.</strong>
+    <br>
+    <br>
+
+    <!--2 hyper link tabs for each page-->
+    <a href="./teacherCreateAnnouncement.html">Teacher Create Announcement</a> &nbsp &nbsp
+    <a href="./studentSearchAnnouncement.html">Student Search Announcement</a> &nbsp &nbsp
+    <br>
+
+    <!-- North Park Image Logo-->
+    <img src="https://pbs.twimg.com/profile_images/665225941057036288/xXpVpaZ_.png" alt="northParkLogo" width="200"
+        height="200">
+
+    <!-- CSS Styling applied to img -->
+    <style>
+        img {
+            display: block;
+            margin-left: 1px;
+            margin-right: 5px;
+        }
+    </style>
+
+</head>
+
+<body onload="displayResults()">
+
+    <!-- paragraph element to hold the announcement details-->
+    <p style="border:3px; border-style:solid; border-color:#FF0000; padding: 1em;" id="htmlSAnnouncementSearch">
+
+    </p> 
+
+    <!--Button to close the current page and return back to the search page-->
+    <button onclick="window.close('studentResults.html')">Go Back/Search Again</button>
+
+</body>
+
+</html>

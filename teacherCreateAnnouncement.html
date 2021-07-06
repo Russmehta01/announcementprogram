@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- JS file containing function that fetches teacher input -->
+    <script src="teacherFetchInput.js"></script>
+    <strong>North Park Announcement Portal</strong>
+    <br>
+    <br>
+
+    <strong>Teacher creator page.</strong>
+    <br>
+    <br>
+
+    <!--2 hyper link tabs for each page-->
+    <a href="./teacherCreateAnnouncement.html">Teacher Create Announcement</a> &nbsp &nbsp
+    <a href="./studentSearchAnnouncement.html">Student Search Announcement</a> &nbsp &nbsp
+    <br>
+
+    <!-- North Park Image Logo-->
+    <img src="https://pbs.twimg.com/profile_images/665225941057036288/xXpVpaZ_.png" alt="northParkLogo" width="200"
+        height="200">
+
+    <!-- CSS Styling applied to img -->
+    <style>
+        img {
+            display: block;
+            margin-left: 1px;
+            margin-right: 5px;
+        }
+    </style>
+
+</head>
+ <!-- Function that updates the announcement counter when the html body loads-->
+<body onload="updateCounter()">
+    <!-- Form that invokes teacherFetchInput when button is pressed-->
+    <form action="javascript:;" onsubmit="teacherFetchInput()">
+
+        <!-- div to hold the fields for teacher input-->
+        <div id="htmlTAnnouncementFields">
+            <!-- Grade checkbox fields-->
+            <b>
+                <h3>Select the Grade(s)</h3>
+            </b>
+
+            <p>
+                <input id="htmlTGrade9" onclick="unCheckGradeAll(this);recheckAll(this)" type="checkbox">Grade 9
+                <input id="htmlTGrade10" onclick="unCheckGradeAll(this);recheckAll(this)" type="checkbox">Grade 10
+                <input id="htmlTGrade11" onclick="unCheckGradeAll(this);recheckAll(this)" type="checkbox">Grade 11
+                <input id="htmlTGrade12" onclick="unCheckGradeAll(this);recheckAll(this)" type="checkbox">Grade 12
+                <input id="htmlTGradeAll" type="checkbox" onclick="checkOtherGrades()">All Grades
+            </p>
+
+            <!-- Dropdown menu for Gender-->
+            <b>
+                <h3>Select the Gender</h3>
+            </b>
+
+            <select id="htmlTGender">
+                <option value ="allGender">All Gender</option>
+                <option value="maleGender">Male</option>
+                <option value="femaleGender">Female</option>
+                <option value="otherOrPreferNotToSayGender">Other/Prefer not to say</option>
+            </select>
+
+
+            <!-- Dropdown menu for Clubs-->
+            <b>
+                <h3>Select the Club</h3>
+            </b>
+
+            <select id="htmlTClub">
+                <option value ="allClub">All Club</option>
+                <option value="northParkHackClub">NPSS Hack Club</option>
+                <option value="northParkMist">NPSS Mist</option>
+                <option value="northParkDeca">NPSS Deca</option>
+            </select>
+            <br>
+            <br>
+
+            <!-- Text Area element with 4x50 dimension -->
+            <textarea id="htmlTAnnouncement" rows="4" cols="50"
+            placeholder="Enter Announcement Details Here"></textarea>
+                
+        </div>
+
+        <!-- Submit Announcement Button (Invokes teacherFetchInput function from form)  -->
+        <button type="submit" id="htmlTSubmitButton">Submit Announcement</button>
+
+        <!-- Clear Announcement Button (Native HTML Clear)  -->
+        <input id="htmlTClear" type="reset" value="Clear Form">
+    </form>
+
+</body>
+
+</html>
